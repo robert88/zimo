@@ -1,0 +1,37 @@
+                                <div class="J-carousel-wrap-experience carousel-wrap carousel-wrap-vertical">
+                                    <div class="carousel-ul-wrap J-carousel-ul-wrap">
+                                        <ul class="J-carousel-ul clearfix carousel-ul">
+
+                                            {{#each $value.solutionsList.items}}
+                                            <li class="J-carousel-li {{($index==0?'active':'')}}" data-pcsrc="{{$value.pcSrc}}"  data-wapsrc="{{$value.wapSrc}}" >
+                                                <div class="layout-list-title">
+                                                    <em class="allow"></em>
+                                                    <div class="layout-table">
+                                                        <div class="layout-cell">
+                                                            <span class="text"><em class="dot"></em>{{$value.title}}</span>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="layout-list-text-wrap">
+                                                    <p class="layout-list-text"> {{$value.text}}</p>
+                                                    {{#if $value.moreLink}}
+                                                    <div class="btn">
+                                                        <a class="getPriceInfo redairbtn-moddle1" {{href($value.moreLink)}}><span>{{$value.moreText}}</span></a>
+                                                    </div>
+                                                    {{#endIf}}
+                                                </div>
+                                            </li>
+                                            {{#endEach}}
+
+                                        </ul>
+                                    </div>
+                                    <div class="J-carousel-prev  carousel-prev"><i class="iconfont icon-up"></i></div>
+                                    <div class="J-carousel-next carousel-next"><i class="iconfont icon-down"></i></div>
+                                    <div class="J-carousel-oconpoint carousel-point carousel-stop-event"></div>
+                                </div>
+                                
+        CAROU({oCon:".J-carousel-wrap-experience",showHeight:75*4,dir:"vertical",initBefore:function(carousel){
+
+
+        }});
